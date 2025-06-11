@@ -1,0 +1,49 @@
+/documentation
+# 📚 Project Methodology: Security Operation Center (SOC)
+
+This document outlines the methodology used in the design and development of a Security Operation Center (SOC) as part of a final diploma project.
+
+## 🔍 1. Project Scope
+
+The main objective was to simulate the planning and setup of a SOC for a mid-sized organization. The project focused on log collection, threat monitoring, security event correlation, and building a foundational understanding of SOC operations using real tools.
+
+## 🧩 2. Key Components of the SOC
+
+- **SIEM (Splunk Enterprise):** Central platform for log collection, event correlation, dashboarding, and alerting.
+- **Windows Server 2022:** Used to simulate Active Directory and provide logs as a Windows-based source.
+- **Ubuntu Linux VM:** Simulated Linux-based log source.
+- **Huawei USG6000 Firewall:** Used for traffic control and perimeter security, generating firewall logs.
+- **PuTTY & WinSCP:** Tools for remote access and secure file transfers between systems.
+
+## 🛠️ 3. Implementation Steps
+
+1. **Design SOC Architecture:**
+   - Defined data flow between endpoints, firewall, and the SIEM.
+   - Created architecture diagrams to visualize system relationships.
+
+2. **Log Collection:**
+   - Installed Splunk Universal Forwarder on Windows and Linux VMs.
+   - Configured log sources including system logs, firewall logs, and authentication logs.
+
+3. **Splunk Setup:**
+   - Installed Splunk Enterprise on a dedicated server.
+   - Configured data inputs and created custom dashboards for event visibility.
+   - Applied correlation searches to detect suspicious behavior.
+
+4. **Firewall Integration:**
+   - Connected Huawei firewall to send logs to Splunk via syslog.
+   - Created filtering rules and monitored allowed/denied traffic.
+
+5. **Threat Simulation:**
+   - Simulated login attempts, port scans, and file transfers to test detection capabilities.
+   - Verified that alerts were triggered and visualized in Splunk dashboards.
+
+## 🧠 4. Learning Outcomes
+
+- Gained hands-on experience with SIEM configuration and log analysis.
+- Learned to build SOC workflows and architecture from scratch.
+- Understood the role of each SOC component in threat detection and response.
+
+## 📌 Summary
+
+This methodology demonstrates how a functional SOC can be simulated in a lab environment using enterprise-grade tools. The project focused on architecture, log integration, and threat visibility to build foundational knowledge for real-world SOC operations.
